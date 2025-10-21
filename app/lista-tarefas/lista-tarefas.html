@@ -1,0 +1,23 @@
+
+<h1>Lista de Tarefas</h1>
+
+@if (tarefas.length === 0) {
+    <p>Nenhuma tarefa cadastrada!</p>
+} @else {
+    <strong>Total de Tarefas: {{ tarefas.length }}</strong>
+    <br>
+    <ul> @for (t of tarefas; track t.id) {
+        <li >
+            <div>
+                <p class="id">ID da Tarefa: {{t.id}}</p>
+                <p class="nome">Nome: {{ t.nome }}</p>
+                <p class="descricao">Descrição: {{ t.descricao }} — {{ t.concluida ? 'Concluída' : 'Pendente' }}</p>
+            </div>
+            <button (click)="remover(t.id)" style="background-color: rgb(249, 115, 98);">Remover</button>
+            <button (click)="marcarConcluida(t.id)" style="background-color: rgb(196, 255, 136);">Concluir</button>
+        </li>
+        <br><br>
+        }
+    </ul>
+}
+

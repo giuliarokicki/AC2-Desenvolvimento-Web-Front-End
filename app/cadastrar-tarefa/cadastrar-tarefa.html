@@ -1,0 +1,9 @@
+<h1>Cadastrar Tarefas</h1>
+
+<div class="centralizar">
+    <form (ngSubmit)="adicionar()"style="max-width:420px">
+        <input [(ngModel)]="nome" name="nome da tarefa" placeholder="nome da tarefa" required>
+        <input [(ngModel)]="descricao"  name="descrição da tarefa"  placeholder="descrição da tarefa"  required>
+        <button type="submit">Cadastrar</button>
+    </form>
+</div>

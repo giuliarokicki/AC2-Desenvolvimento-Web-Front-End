@@ -1,0 +1,22 @@
+/* .nome{
+    font-size: 40px;
+    font-weight: bold;
+    
+}
+
+.descricao{
+    font-size: 20px;
+    font-weight: bold;
+
+} */
+
+h1{
+    text-align: center;
+    font-size: 50px;
+}
+
+.centralizar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
